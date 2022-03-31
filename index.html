@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+	
+
+	</title>
+<style type="text/css">
+		.box1{
+			background-color: red;
+			height: 100px;
+			width: 100px;
+			border-radius:  50px;
+			top: 20px;
+			transition: 1s;
+			position: absolute;
+		}
+		.box2{
+			background-color: slateblue;
+			height: 100px;
+			width: 100px;
+			border-radius:  50px;
+			position: absolute;
+			top: 500px;
+			transition: 1s;
+
+		}
+
+		.box3{
+			background-color: forestgreen;
+			height: 100px;
+			width: 100px;
+			border-radius:  50px;
+			position: absolute;
+			left: 500px;
+			transition: 1s;
+
+		}
+
+</style>
+</head>
+<body>
+<div class="box1" style="left: 20px"></div>
+<div class="box1" style="left: 220px"></div>
+<div class="box1" style="left: 420px"></div>
+<div class="box1" style="left: 620px"></div>
+
+<div class="box2" style="left: 20px"></div>
+<div class="box2" style="left: 220px"></div>
+<div class="box2" style="left: 420px"></div>
+<div class="box2" style="left: 620px"></div>
+
+<div class="box3" style="left: 20px"></div>
+<div class="box3" style="left: 220px"></div>
+<div class="box3" style="left: 420px"></div>
+<div class="box3" style="left: 620px"></div>
+<script type="text/javascript">
+	let box1 = document.querySelectorAll(".box1");
+	let box2 = document.querySelectorAll(".box2");
+	let box3 = document.querySelectorAll(".box3");
+
+	let box1Top = 20;
+	let box1Move = function(){
+		box1Top = box1Top + 50;
+		//box1[0].style.top = box1Top + "px";
+		//box1[1].style.top = box1Top + "px";
+		//box1[2].style.top = box1Top + "px";
+		//box1[3].style.top = box1Top + "px";
+		for(let i = 0;i<4;i=i+1){
+			box1[i].style.top = box1Top + "px";
+		}
+
+
+	}
+
+	let box2Top = 20;
+	let box2Move = function(){
+		box2Top = box1Top + 50;
+		//box2[0].style.top = box1Top + "px";
+		//box2[1].style.top = box1Top + "px";
+		//box2[2].style.top = box1Top + "px";
+		//box2[3].style.top = box1Top + "px";
+		for(let i = 0;i<4;i=i+1){
+			box2[i].style.top = box2Top + "px";
+		}
+
+
+	}
+
+	setInterval(box1Move,1000);
+</script>
+</body>
+</html>
